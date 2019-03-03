@@ -14,7 +14,10 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        dd('index');
+
+        $projects = Project::all();
+
+        return view('welcome')->withProjects($projects);
     }
 
     /**
@@ -24,7 +27,7 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        dd('create');
+        return view('create');
     }
 
     /**
