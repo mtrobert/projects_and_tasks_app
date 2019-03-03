@@ -14,7 +14,7 @@ class TasksController extends Controller
      */
     public function index()
     {
-        //
+        dd('index');
     }
 
     /**
@@ -24,7 +24,7 @@ class TasksController extends Controller
      */
     public function create()
     {
-        //
+        dd('create');
     }
 
     /**
@@ -35,7 +35,7 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd('store');
     }
 
     /**
@@ -46,7 +46,7 @@ class TasksController extends Controller
      */
     public function show(Task $task)
     {
-        //
+        dd('show');
     }
 
     /**
@@ -57,7 +57,7 @@ class TasksController extends Controller
      */
     public function edit(Task $task)
     {
-        //
+        dd('edit');
     }
 
     /**
@@ -69,7 +69,7 @@ class TasksController extends Controller
      */
     public function update(Request $request, Task $task)
     {
-        //
+        dd('update');
     }
 
     /**
@@ -80,6 +80,6 @@ class TasksController extends Controller
      */
     public function destroy(Task $task)
     {
-        //
+        dd('destroy');
     }
 }
