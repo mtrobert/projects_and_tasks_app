@@ -38,7 +38,14 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        dd('store');
+        // dd('store');
+        Project::create($request->validate([
+                              'title'   => 'required|min:5',
+                              'owner'   => 'required|min:2',
+                              'description' => 'required|min:5'
+        ]));
+
+        return redirect('/');
     }
 
     /**
