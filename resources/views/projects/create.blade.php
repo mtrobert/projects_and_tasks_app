@@ -46,8 +46,10 @@
 
   </div>
 
+  @include('errors')
 
 </form>
+
 
 </div>
 
