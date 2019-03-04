@@ -18,7 +18,7 @@
   <div class="field">
 
     <div class="control">
-      <input class="input" type="text" name="title" placeholder="Title">
+      <input class="input" type="text" name="title" placeholder="Title" value="{{ old('title') }}">
     </div>
 
   </div>
@@ -26,7 +26,7 @@
   <div class="field">
 
     <div class="control">
-      <input class="input" type="text" name="owner" placeholder="Owner">
+      <input class="input" type="text" name="owner" placeholder="Owner" value="{{ old('owner') }}">
     </div>
 
   </div>
@@ -34,7 +34,7 @@
   <div class="field">
 
     <div class="control">
-      <textarea class="textarea" name="description" rows="8" cols="80"  placeholder="Description"></textarea>
+      <textarea class="textarea" name="description" rows="8" cols="80"  placeholder="Description">{{ old('description') }}</textarea>
     </div>
 
   </div>
