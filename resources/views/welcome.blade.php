@@ -11,10 +11,10 @@
     @foreach ($projects as $project)
     <div class="container box is-fluid">
 
-      <ul class="is-dark" style="margin-bottom: 2em">
+      <div class="is-dark" style="margin-bottom: 2em">
         <h4 class="subtitle">Name: <a href="/laravel/projects_app/public/projects/{{$project->id}}">{{$project->title}}</a></h4>
         <p>Owner: {{$project->owner}}</p>
-      </ul>
+      </div>
 
     </div>
     @endforeach
