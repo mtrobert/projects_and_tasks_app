@@ -38,7 +38,6 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        // dd('store');
         Project::create($request->validate([
                               'title'   => 'required|min:5',
                               'owner'   => 'required|min:2',
@@ -56,7 +55,7 @@ class ProjectsController extends Controller
      */
     public function show(Project $project)
     {
-        dd('show');
+        return view('projects.show')->withProject($project);
     }
 
     /**
