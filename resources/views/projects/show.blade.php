@@ -37,7 +37,9 @@
         </div>
 
         <div class="level">
-          <button class="button level-left"><a href="{{env('base_url')}}projects/{{ $project->id }}/edit">Edit</a></button>
+          <div class="control">
+            <button class="button level-left"><a href="{{env('BASE_URL')}}/projects/{{ $project->id }}/edit">Edit</a></button>
+          </div>
 
           <form class="level-right" action="{{ env('base_url') }}projects/{{$project->id}}" method="post">
             @csrf
