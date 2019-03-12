@@ -1,6 +1,9 @@
 @extends('layout')
 
 @section('content')
+  <div class="section">
+
+
   <div class="container box hero is-dark has-text-centered">
 
     <h1 class="title">Current Projects</h1>
@@ -18,6 +21,8 @@
 
     </div>
     @endforeach
+
+  </div>
 
   </div>
 @endsection
