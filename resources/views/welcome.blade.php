@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-  <div class="section">
+<div class="section">
 
 
   <div class="container box hero is-dark has-text-centered">
@@ -9,6 +9,7 @@
     <h1 class="title">Current Projects</h1>
 
   </div>
+
   <div class="container">
 
     @foreach ($projects as $project)
@@ -24,5 +25,5 @@
 
   </div>
 
-  </div>
+</div>
 @endsection

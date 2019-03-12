@@ -61,10 +61,27 @@
 
       <div class="is-dark" style="margin-bottom: 2em;">
         <h4 class="subtitle has-text-black-bis has-text-weight-semibold">Tasks</h4>
-        @for ($i=0; $i<7; $i++)
-          <p class="is-italic">Task  #{{$i}}</p>
-        @endfor
       </div>
+      <div class="container">
+
+      @if ($project->tasks->count())
+
+        @foreach ($project->tasks as $task)
+
+          <ul>
+            <li>
+              {{$task->description}}
+            </li>
+          </ul>
+
+        @endforeach
+
+      @else
+
+        <p>There is no task for this project.</p>
+
+      @endif
+    </div>
 
     </div>
 
