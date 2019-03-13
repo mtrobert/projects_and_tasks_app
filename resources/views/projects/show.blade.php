@@ -62,23 +62,33 @@
       <div class="is-dark" style="margin-bottom: 2em;">
         <h4 class="subtitle has-text-black-bis has-text-weight-semibold">Tasks</h4>
       </div>
+
       <div class="container">
 
       @if ($project->tasks->count())
 
         @foreach ($project->tasks as $task)
 
-          <ul>
-            <li>
-              {{$task->description}}
-            </li>
-          </ul>
+          <form  action="{{ env('BASE_URL') }}/tasks/{{$task->id}}" method="POST">
+
+            {{ method_field('PATCH') }}
+
+            <div>
+              <label class="checkbox" for="completed">
+
+                <input type="checkbox" name="completed" onchange="this.form.submit()">
+                  {{$task->description}}
+
+                </label>
+            </div>
+
+          </form>
 
         @endforeach
 
       @else
 
-        <p>There is no task for this project.</p>
+        <p class>There is no task for this project.</p>
 
       @endif
     </div>
