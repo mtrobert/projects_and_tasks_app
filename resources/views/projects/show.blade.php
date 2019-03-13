@@ -44,8 +44,8 @@
           <button class="button level-left"><a href="{{env('BASE_URL')}}/projects/{{ $project->id }}/edit">Edit</a></button>
         </div>
 
-        <form class="level-right" action="{{ env('base_url') }}projects/{{$project->id}}" method="post">
-          @csrf
+        <form class="level-right" action="{{ env('BASE_URL') }}/projects/{{$project->id}}" method="post">
+          {{ csrf_field() }}
           {{ method_field('DELETE') }}
 
         <div class="control">
@@ -89,11 +89,34 @@
 
       @else
 
-        <p class>There is no task for this project.</p>
+        <p>There is no task for this project.</p>
 
       @endif
     </div>
 
+    </div>
+
+    <div class="container box is-fluid">
+      <form class="" action="{{ env('BASE_URL') }}/tasks" method="post">
+        {{ csrf_field() }}
+
+        <div class="field">
+
+          <div class="control">
+            <input class="input" type="text" name="description" placeholder="Description" value="{{ old('description') }}">
+          </div>
+
+        </div>
+
+        <div class="field">
+
+            <button class="button" type="submit">Add A Task</button>
+
+        </div>
+
+        @include('errors')
+
+      </form>
     </div>
 
   </div>
