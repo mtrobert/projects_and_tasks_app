@@ -97,7 +97,8 @@
     </div>
 
     <div class="container box is-fluid">
-      <form class="" action="{{ env('BASE_URL') }}/tasks" method="post">
+
+      <form class="" action="{{ env('BASE_URL') }}/projects/{{$project->id}}/tasks" method="post">
         {{ csrf_field() }}
 
         <div class="field">
