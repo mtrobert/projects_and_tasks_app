@@ -75,9 +75,9 @@
             {{ csrf_field() }}
 
             <div>
-              <label class="checkbox" for="completed">
+              <label class="checkbox {{ $task->completed ? "is-complete" : "" }}" for="completed">
 
-                <input type="checkbox" name="completed" onchange="this.form.submit()">
+              <input type="checkbox" name="completed" onchange="this.form.submit()" {{$task->completed ? "checked": "" }}>
                   {{$task->description}}
 
                 </label>
