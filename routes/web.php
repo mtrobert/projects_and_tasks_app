@@ -20,4 +20,4 @@ Route::delete('/projects/{project}', 'ProjectsController@destroy');
 Route::get('/projects/{project}', 'ProjectsController@show');
 Route::get('projects/{project}/edit', 'ProjectsController@edit');
 Route::patch('/tasks/{task}', 'ProjectTasksController@update');
-Route::post('/tasks', 'ProjectTasksController@store');
+Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
