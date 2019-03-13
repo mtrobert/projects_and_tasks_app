@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Task;
 use Illuminate\Http\Request;
 
-class TasksController extends Controller
+class ProjectTasksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -82,4 +82,4 @@ class TasksController extends Controller
     {
         dd('destroy');
     }
-}
+  }
