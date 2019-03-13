@@ -72,6 +72,7 @@
           <form  action="{{ env('BASE_URL') }}/tasks/{{$task->id}}" method="POST">
 
             {{ method_field('PATCH') }}
+            {{ csrf_field() }}
 
             <div>
               <label class="checkbox" for="completed">
