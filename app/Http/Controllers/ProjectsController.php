@@ -66,7 +66,7 @@ class ProjectsController extends Controller
      */
     public function edit(Project $project)
     {
-        dd('edit');
+        return view('projects.edit')->withProject($project);
     }
 
     /**
