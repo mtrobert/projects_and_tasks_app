@@ -19,10 +19,7 @@ class Project extends Model
     public function addTask(Array $validated)
     {
 
-      Task::create([
-                  'project_id'  => $this->id,
-                  'description' => $validated['description']
-      ]);
+      $this->tasks()->create(['description' => $validated['description']]);
 
     }
 }
