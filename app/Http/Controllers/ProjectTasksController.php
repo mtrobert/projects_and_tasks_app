@@ -40,11 +40,7 @@ class ProjectTasksController extends Controller
 
         $project->addTask($validated);
 
-        // Task::create([
-        //             'project_id'  => $project->id,
-        //             'description' => $validated['description']
-        // ]);
-
+      
         return back();
     }
 

@@ -10,6 +10,19 @@ class Project extends Model
 
     public function tasks()
     {
+
       return $this->hasMany(Task::class);
+
+    }
+
+
+    public function addTask(Array $validated)
+    {
+
+      Task::create([
+                  'project_id'  => $this->id,
+                  'description' => $validated['description']
+      ]);
+
     }
 }
