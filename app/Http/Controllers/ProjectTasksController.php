@@ -40,7 +40,7 @@ class ProjectTasksController extends Controller
 
         $project->addTask($validated);
 
-      
+
         return back();
     }
 
@@ -75,9 +75,7 @@ class ProjectTasksController extends Controller
      */
     public function update(Request $request, Task $task)
     {
-        $task->update([
-          "completed" => $request->has('completed')
-        ]);
+        $task->complete(request()->has('completed'));
 
         return back();
     }
