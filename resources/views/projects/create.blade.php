@@ -13,7 +13,7 @@
 
   <div class="container">
 
-    <form class="form" action="{{env('BASE_URL')}}/projects" method="post">
+    <form class="container box is-fluid" action="{{env('BASE_URL')}}/projects" method="post">
 
       {{ csrf_field() }}
 
