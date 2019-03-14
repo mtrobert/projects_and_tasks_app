@@ -78,7 +78,14 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        dd('update');
+        $project->title = $request->title;
+        $project->owner = $request->owner;
+        $project->description = $request->description;
+
+        $project->save();
+
+        return redirect('/');
+
     }
 
     /**
