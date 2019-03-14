@@ -38,10 +38,12 @@ class ProjectTasksController extends Controller
 
         $validated = request()->validate(['description' => 'required|min:3|max:255']);
 
-        Task::create([
-                    'project_id'  => $project->id,
-                    'description' => $validated['description']
-        ]);
+        $project->addTask($validated);
+
+        // Task::create([
+        //             'project_id'  => $project->id,
+        //             'description' => $validated['description']
+        // ]);
 
         return back();
     }
