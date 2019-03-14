@@ -69,22 +69,43 @@
 
         @foreach ($project->tasks as $task)
 
-          <form  action="{{ env('BASE_URL') }}/tasks/{{$task->id}}" method="POST">
+          <div class="container" style="margin: 2em;">
 
-            {{ method_field('PATCH') }}
-            {{ csrf_field() }}
 
-            <div>
-              <label class="checkbox {{ $task->completed ? "is-complete" : "" }}" for="completed">
+          <div class="container">
 
-              <input type="checkbox" name="completed" onchange="this.form.submit()" {{$task->completed ? "checked": "" }}>
-                  {{$task->description}}
+            <form action="{{ env('BASE_URL') }}/tasks/{{$task->id}}" method="POST">
 
-                </label>
-            </div>
+              {{ method_field('PATCH') }}
+              {{ csrf_field() }}
 
-          </form>
+              <div>
+                <label class="checkbox {{ $task->completed ? "is-complete" : "" }}" for="completed">
 
+                <input type="checkbox" name="completed" onchange="this.form.submit()" {{$task->completed ? "checked": "" }}>
+                    {{$task->description}}
+
+                  </label>
+              </div>
+
+            </form>
+
+          </div>
+
+
+          <div class="container" style="margin: 1em;">
+            <form  class="control" action="{{ env('BASE_URL') }}/tasks/{{ $task->id }}" method="post">
+
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
+
+              <div>
+                <button type="submit" class="is-small button has-text-danger">Delete</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
         @endforeach
 
       @else
